@@ -1,0 +1,23 @@
+{
+  "name" : "ypa/jigsaw-generators",
+  "description" : "Jigsaw SSG helper for Generating content",
+  "version" : "1.0.0",
+  "type" : "package",
+  "require" : {
+    "ext-json" : "*",
+    "symfony/yaml" : "^4.0"
+  },
+  "require-dev" : {},
+  "license" : "MIT",
+  "authors" : [
+    {
+      "name" : "Jos Koomen",
+      "email" : "jos@yourpersonalagency.nl"
+    }
+  ],
+  "autoload" : {
+    "psr-4" : {
+      "Ypa\\Jigsaw\\" : "src/"
+    }
+  }
+}
