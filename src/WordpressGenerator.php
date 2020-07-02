@@ -19,6 +19,26 @@ class WordpressGenerator extends MarkdownGenerator
         return self::field('title', $pPost['title']['rendered']);
     }
 
+    public static function category($pPost)
+    {
+        return self::field('category', $pPost['category']['name']);
+    }
+
+    public static function order($pPost)
+    {
+        return self::field('order', $pPost['menu_order']);
+    }
+
+    public static function categorytitle($pPost)
+    {
+        return self::field('title', $pPost['name']);
+    }
+
+    public static function description($pPost)
+    {
+        return self::field('description', $pPost['description']);
+    }
+
     public static function content($pPost)
     {
         return self::field('content', $pPost['content']['rendered']);
