@@ -66,4 +66,9 @@ class WordpressGenerator extends MarkdownGenerator
         return self::yaml(['footermenu' => $pMenu]);
     }
 
+    public static function disclaimermenu($pMenu)
+    {
+        return self::yaml(['disclaimer' => $pMenu]);
+    }
+
 }
