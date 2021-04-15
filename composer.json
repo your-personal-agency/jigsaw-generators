@@ -1,7 +1,7 @@
 {
   "name" : "ypa/jigsaw-generators",
   "description" : "Jigsaw SSG helper for Generating content",
-  "version" : "1.0.1",
+  "version" : "1.0.2",
   "type" : "package",
   "require" : {
     "ext-json" : "*",
