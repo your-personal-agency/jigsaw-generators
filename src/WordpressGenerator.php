@@ -56,4 +56,14 @@ class WordpressGenerator extends MarkdownGenerator
         return implode('', $str);
     }
 
+    public static function mainmenu($pMenu)
+    {
+        return self::field('mainmenu', $pMenu['items']);
+    }
+
+    public static function footermenu($pMenu)
+    {
+        return self::field('footermenu', $pMenu['pMenu']);
+    }
+
 }
