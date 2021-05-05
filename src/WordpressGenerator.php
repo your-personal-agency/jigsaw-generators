@@ -29,7 +29,15 @@ class WordpressGenerator extends MarkdownGenerator
         return self::field('order', $pPost['menu_order']);
     }
 
+    /**
+     * @deprecated
+     */
     public static function categorytitle($pPost)
+    {
+        return self::categoryTitle($pPost);
+    }
+
+    public static function categoryTitle($pPost)
     {
         return self::field('title', $pPost['name']);
     }
@@ -44,28 +52,41 @@ class WordpressGenerator extends MarkdownGenerator
         return self::field('content', $pPost['content']['rendered']);
     }
 
-    public static function yoast($pData)
+    public static function yoast($pData, $pEncodeJsonLd = true)
     {
         $yoast = [];
         $yoast['title'] = $pData['yoast_title'];
         $yoast['meta'] = $pData['yoast_meta'];
-        $yoast['json_ld'] = json_encode($pData['yoast_json_ld']);
+        if ($pEncodeJsonLd !== true) {
+            $yoast['json_ld'] = $pData['yoast_json_ld'];
+        } else {
+            $yoast['json_ld'] = json_encode($pData['yoast_json_ld']);
+        }
 
         $str = [];
         $str[] = self::yaml(['yoast' => $yoast]);
         return implode('', $str);
     }
 
+    /**
+     * @deprecated Use yaml
+     */
     public static function mainmenu($pMenu)
     {
         return self::yaml(['mainmenu' => $pMenu]);
     }
 
+    /**
+     * @deprecated Use yaml
+     */
     public static function footermenu($pMenu)
     {
         return self::yaml(['footermenu' => $pMenu]);
     }
 
+    /**
+     * @deprecated Use yaml
+     */
     public static function disclaimermenu($pMenu)
     {
         return self::yaml(['disclaimer' => $pMenu]);
