@@ -1,7 +1,7 @@
 {
   "name" : "ypa/jigsaw-generators",
   "description" : "Jigsaw SSG helper for Generating content",
-  "version" : "1.0.4",
+  "version" : "1.1.0",
   "type" : "package",
   "require" : {
     "ext-json" : "*",
@@ -13,6 +13,14 @@
     {
       "name" : "Jos Koomen",
       "email" : "jos@yourpersonalagency.nl"
+    },
+    {
+      "name" : "Tim van de Velde",
+      "email" : "tim@yourpersonalagency.nl"
+    },
+    {
+      "name" : "Yarno van Oort",
+      "email" : "yarno@yourpersonalagency.nl"
     }
   ],
   "autoload" : {
