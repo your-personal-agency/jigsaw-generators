@@ -29,14 +29,6 @@ class WordpressGenerator extends MarkdownGenerator
         return self::field('order', $pPost['menu_order']);
     }
 
-    /**
-     * @deprecated
-     */
-    public static function categorytitle($pPost)
-    {
-        return self::categoryTitle($pPost);
-    }
-
     public static function categoryTitle($pPost)
     {
         return self::field('title', $pPost['name']);
@@ -68,28 +60,9 @@ class WordpressGenerator extends MarkdownGenerator
         return implode('', $str);
     }
 
-    /**
-     * @deprecated Use yaml
-     */
-    public static function mainmenu($pMenu)
+    public static function menu($pName, $pMenu)
     {
-        return self::yaml(['mainmenu' => $pMenu]);
-    }
-
-    /**
-     * @deprecated Use yaml
-     */
-    public static function footermenu($pMenu)
-    {
-        return self::yaml(['footermenu' => $pMenu]);
-    }
-
-    /**
-     * @deprecated Use yaml
-     */
-    public static function disclaimermenu($pMenu)
-    {
-        return self::yaml(['disclaimer' => $pMenu]);
+        return self::yaml([$pName => $pMenu]);
     }
 
 }
